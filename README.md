@@ -55,7 +55,7 @@ SQLAlchemy errors, automatic sign out has a short time span
 
 ### Contact details
 
-You can contact me at danmark.chemuren@gmail.com for any feedback.
+You can contact me at jameskirwa34@gmail.com for any feedback.
 
 ### License
 
