@@ -1,0 +1,33 @@
+<div style="background-color:rgba(255, 255, 255, 0); color: #000000;" class="navbar" role="navigation" style="margin-bottom:0; border-bottom: 1px solid">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar" style="background-color: rgba(255, 255, 255, 0);"></span>
+            <span class="icon-bar" style="background-color: rgba(255, 255, 255, 0);"></span>
+            <span class="icon-bar" style="background-color: rgba(255, 255, 255, 0);"></span>
+        </button>
+        <a href="/" class="navbar-brand" style="color: blue;" onmouseover="this.style.color='red'" onmouseout="this.style.color='blue'">INIT BLOG</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="{{url_for('main.blog')}}" style="color: blue;" onmouseover="this.style.borderBottom='thick solid blue'" onmouseout="this.style.borderBottom='none'">View Blogs</a></li>
+
+                {% if current_user.is_authenticated %}
+                <li><a href="{{url_for('main.new_blog')}}" style="color: blue;" onmouseover="this.style.borderBottom='thick solid blue'" onmouseout="this.style.borderBottom='none'">New Blog</a></li>
+                <li class="dropdown"><a style="color: blue;" onmouseover="this.style.borderBottom='thick solid blue'" onmouseout="this.style.borderBottom='none'" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                    aria-expanded="false">{{current_user.username| capitalize}} <span class="caret"></span></a>
+                    
+                </li>
+                <li><a style="color: blue;" onmouseover="this.style.borderBottom='thick solid blue'" onmouseout="this.style.borderBottom='none'" href="{{url_for('auth.logout')}}">Sign out</a></li>
+                {% else %}
+                <li><a style="color: blue;" onmouseover="this.style.borderBottom='thick solid blue'" onmouseout="this.style.borderBottom='none'" href="{{url_for('auth.login')}}">Login</a></li>
+            </ul>
+            {% endif %}
+        </div>
+    </div>
+</div>
+        
+    
+
+

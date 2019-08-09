@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% import "bootstrap/wtf.html" as wtf%}
+
+{% block styles%}
+{{super()}}
+
+{% endblock %}
+
+
+{% block content%}
+
+<div class="container" style="font-family: 'Sniglet', cursive;">
+<hr style="background-color:blue;">
+	<div align="center" class="row">
+		<h5 class="text-center" style="border-bottom: 2px solid blue;width:50%; color: #000; padding-bottom: 10px;">{{random.quote}}</h5>
+		<h4 class="text-center" style="border-bottom: 2px solid blue; color: #000; padding-bottom: 10px;">Author: {{random.author}}</h4>
+	</div>
+	<div class="row">
+		{% for blog in blogs %}
+		
+		<div align="center" class="col col-md-12">
+			<div class="row">
+				<div class="row">
+					<h1>{{blog.title}}</h1>
+
+				</div>
+
+				<div class="row">
+					<p>{{blog.description | truncate(400)}}
+
+							<footer> Posted by {{blog.user.username}}</footer>
+						
+					</p>
+
+
+				</div>
+				<div class="row">
+					<a href="{{url_for('main.view_blog',blog_id = blog.id)}}" class="btn btn-info" style="border-bottom: 2px solid #000000; color: #000; padding-bottom: 10px;padding-left:15px;padding-right:15px;">Read More</a>
+
+
+				</div>
+
+			</div>
+
+		</div>
+		{% endfor%}
+
+
+	</div>
+
+</div>
+
+{% endblock%}
