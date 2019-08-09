@@ -1,8 +1,8 @@
 import os
 
 class Config:
-    SECRET_KEY = 'mutai'
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://dnmrk:isystems123@localhost/blog'
+    SECRET_KEY = 'james'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://james:james@localhost/blog'
     UPLOADED_PHOTOS_DEST = 'app/static/photos'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     MAIL_PORT = 587
@@ -15,7 +15,7 @@ class ProdConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
 
 class TestConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://dnmrk:isystems123@localhost/blog_test'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://james:james@localhost/blog_test'
 
 class DevConfig(Config):
     DEBUG = True
