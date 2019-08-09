@@ -1,6 +1,6 @@
 # [INIT BLOG](https://init-blog.herokuapp.com/)
 
-### Author
+## Author
 
 By [James Kirwa](https://github.com/Jameskirwa/Blogging-Hood)
 
@@ -28,17 +28,15 @@ Get the specifications by clicking [here](/specs.md)
 then run this command to install pip addons`$ curl https://bootstrap.pypa.io/get-pip.py | python`
 
  Run the following in the start.sh file to prepare your internet environment to run.
-```zsh or bash
+zsh or bash
 $ export DATABASE_URL='postgresql+psycopg2://your username:your password@localhost/your db'
 $ export SECRET_KEY='Your secret key'
-```
 
 Run this commands to be able to migrate your database to application.
-```zsh or bash 
+zsh or bash
 $ python manage.py db init
 $ python manage.py db migrate -m "initial migration"
 $ python manage.py db upgrade
-```
 In the same terminal type use this command to run your application:
 `$ python3 manage.py server` then open the browser at `http://localhost:5000/`
 
