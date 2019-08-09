@@ -1,4 +1,4 @@
-export DATABASE_URL = 'postgresql+psycopg2://dnmrk:isystems123@localhost/blog'
+export DATABASE_URL = 'postgresql+psycopg2://james:james@localhost/blog'
 export MAIL_USERNAME='jameskirwa@gmail.com'
 export MAIL_PASSWORD='Uppercase2000'
 
