@@ -1,4 +1,4 @@
-# [INIT BLOG](https://init-blog.herokuapp.com/)
+# [BLOGGING HOOD](https://init-blog.herokuapp.com/)
 
 ## Author
 
