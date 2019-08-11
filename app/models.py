@@ -35,7 +35,7 @@ class User(UserMixin,db.Model):
         return f'User{self.username},{self.email}'
 
 
-class Role(db.Models):
+class Role(db.Model):
     __tablename__ = 'roles'
 
     id = db.Column(db.Integer,primary_key = True)
